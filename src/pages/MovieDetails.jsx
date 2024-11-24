@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { api_base } from "../api";
 
 import "../styles/MovieDetails.css";
 
@@ -15,7 +16,7 @@ export default function Details() {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    fetch(`https://studio-ghibli-api.onrender.com/${params.id}`)
+    fetch(api_base+params.id)
       .then((response) => response.json())
       .then((data) => {
         setMovie(data);

@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Banner from "../components/Banner";
 import CardMovie from "../components/CardMovie";
+import { api_base } from "../api";
 
 export default function Container() {
   const navegation = useNavigate();
@@ -30,7 +31,7 @@ export default function Container() {
   }
 
   useEffect(() => {
-    fetch("https://studio-ghibli-api.onrender.com")
+    fetch(api_base)
       .then((response) => response.json())
       .then((data) => {
         setMovies(data.films);
