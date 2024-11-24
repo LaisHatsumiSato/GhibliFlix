@@ -1,0 +1,1 @@
+export const api_base = 'https://studio-ghibli-api-production.up.railway.app/'
