@@ -14,9 +14,9 @@ export default function Banner({ onClick, title, time, score, banner }) {
       >
         <div className="banner-content">
           <span className="info">
-            <img className="infoIcon" src={iconScore} alt={top.running_tim} />
+            <img className="infoIcon" src={iconScore} alt="Score" />
             <p>Score {score}</p>
-            <img className="infoIcon" src={duration} alt={top.running_tim} />
+            <img className="infoIcon" src={duration} alt="Duração" />
             <p>Duração {time} min</p>
           </span>
           <h1>{title}</h1>
